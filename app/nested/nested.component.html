@@ -1,0 +1,24 @@
+<ActionBar class="action-bar" title="Nested">
+
+    <NavigationButton *ngIf="nesting"></NavigationButton>
+
+    <NavigationButton  *ngIf="!nesting" ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem  *ngIf="!nesting" icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+                ios.position="left">
+    </ActionItem>
+
+</ActionBar>
+
+<RadSideDrawer #drawer showOverNavigation="true" [drawerTransition]="sideDrawerTransition">
+
+    <StackLayout tkDrawerContent>
+        <MyDrawer [selectedPage]="'Home'"></MyDrawer>
+    </StackLayout>
+
+    <GridLayout class="page page-content" tkMainContent>
+        <Label class="page-icon fa" text="&#xf015;"></Label>
+        <Button class="link" text="Navigate" [nsRouterLink]="['/nested', nesting + 1]"></Button>
+    </GridLayout>
+
+</RadSideDrawer>
+
