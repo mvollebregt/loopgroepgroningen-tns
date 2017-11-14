@@ -7,6 +7,9 @@ $sidedrawer-header-image-offset-top: 20;
 $sidedrawer-header-image-offset-bottom: 5;
 
 .sidedrawer {
+
+    background-color: $ab-background;
+
     &.sidedrawer-left {
         .sidedrawer-header-image {
             color: $background-dark;
@@ -29,9 +32,5 @@ $sidedrawer-header-image-offset-bottom: 5;
         .sidedrawer-header-brand {
             color: $ab-color;
         }
-    }
-
-    .sidedrawer-content {
-        background-color: $side-drawer-background;
     }
 }

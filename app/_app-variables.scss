@@ -41,17 +41,21 @@ $page-content-placeholder-font-size: 20;
 **/
 
 // Colors
-$background: #fff;
+$background: #ff811a;
 $primary: lighten(#000, 13%);
 $secondary: lighten(#000, 46%);
 $disabled: lighten(#000, 62%);
-$accent: $accent-dark;
+$accent: #faf4ed;
 $error: $error-light;
+
+// ActionBar
+$ab-background: $accent;
+$ab-color: black;
 
 // SideDrawer
 $item-color-android : #737373;
-$item-active-background: #F8F8F8;
-$item-active-color: $accent;
+$item-active-background: darken($ab-background, 5%);
+$item-active-color: $ab-color;
 $item-active-icon-color: $item-active-color;
 $item-color-ios: $blue-dark;
 $item-color-android: $blue-dark;
@@ -59,10 +63,6 @@ $item-color-android: $blue-dark;
 $side-drawer-header-background: #fafafa;
 $side-drawer-header-brand: #737373;
 $side-drawer-background: #FFFFFF;
-
-// ActionBar
-$ab-background: $accent;
-$ab-color: $white;
 
 // Buttons
 $btn-color-inverse: $white;
